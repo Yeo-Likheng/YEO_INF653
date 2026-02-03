@@ -1,8 +1,11 @@
 <?php
     $input = 7;
+    echo "<pre>";
+    echo "Input: {$input}\n";
     if($input % 2 !== 7){
-        echo "$input is an odd number.";
+        echo "Output: {$input} is an odd number.";
     }else{
-        echo "$input is an even number.";
+        echo "Output: {$input} is an even number.";
     }
+    echo "<pre>";
 ?>
