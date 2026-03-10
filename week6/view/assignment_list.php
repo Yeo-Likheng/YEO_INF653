@@ -2,6 +2,8 @@
 include('view/header.php');
 ?>
 
+<main>
+
 <!-- Section to Display Assignments -->
 <section class="assignment-container">
     <h2>Assignments</h2>
@@ -20,14 +22,18 @@ include('view/header.php');
     <?php if (!empty($assignments)) : ?>
         <?php foreach ($assignments as $assignment) : ?>
             <div class="assignment-item">
-                <p><strong><?= htmlspecialchars($assignment['courseName']) ?></strong></p>
-                <p><?= htmlspecialchars($assignment['Description']) ?></p>
                 <div>
-                    <a href=".?action=edit_assignment&assignment_id=<?= $assignment['ID'] ?>" class="edit-button">Edit</a>
-                    <form action="." method="post" style="display:inline;">
+                    <p><strong><?= htmlspecialchars($assignment['courseName']) ?></strong></p>
+                    <p><?= htmlspecialchars($assignment['Description']) ?></p>
+                </div>
+                <div style="display:flex; gap:8px; align-items:center;">
+                    <a href=".?action=edit_assignment&assignment_id=<?= $assignment['ID'] ?>">
+                        <button type="button" class="edit-button">Edit</button>
+                    </a>
+                    <form action="." method="post">
                         <input type="hidden" name="action" value="delete_assignment">
                         <input type="hidden" name="assignment_id" value="<?= $assignment['ID'] ?>">
-                        <button type="submit" class="remove-button" onclick="return confirm('Are you sure you want to delete this assignment?')">X</button>
+                        <button type="submit" class="remove-button" onclick="return confirm('Are you sure you want to delete this assignment?')">✕</button>
                     </form>
                 </div>
             </div>
@@ -37,8 +43,6 @@ include('view/header.php');
     <?php endif; ?>
 </section>
 
-
-
 <section class="assignment-container">
     <h2>Add Assignment</h2>
 
@@ -47,20 +51,19 @@ include('view/header.php');
         <select name="course_id" required>
             <option value="">Please select</option>
             <?php foreach ($courses as $course) : ?>
-
                 <option value="<?= $course['courseID'] ?>">
                     <?= htmlspecialchars($course['courseName']); ?>
                 </option>
             <?php endforeach; ?>
         </select>
-
         <input type="text" name="description" maxlength="120" placeholder="Description" required>
-        <button type="submit">Add</button>
+        <button type="submit" name="action" value="add_assignment">Add</button>
     </form>
 </section>
 
-
 <p><a href=".?action=list_courses">View/Edit Courses</a></p>
+
+</main>
 
 <?php
 include('view/footer.php');

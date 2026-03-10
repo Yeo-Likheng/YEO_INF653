@@ -1,7 +1,7 @@
 <?php
 include("view/header.php");
 ?>
-
+<main>
 <!-- Display Courses -->
 <?php if (!empty($courses)) : ?>
     <section id="list" class="course-container">
@@ -51,7 +51,7 @@ include("view/header.php");
 
 
 <p><a href=".?action=list_assignments">View/Edit Assignments</a></p>
-
+</main>
 <?php
 
 include("view/footer.php");
