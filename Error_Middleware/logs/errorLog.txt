@@ -1,0 +1,5 @@
+b9cca292-585c-49a9-a4f7-8b2b01058916 	 [2026-04-09 10:54:50] 	 Error 	 ENOENT: no such file or directory, stat '/Users/user/Documents/FHSU_Spring_2026/Backend_Development/Error_Middleware/views/index.html'
+916bf3c0-0de1-4eb6-be7e-7fcb4cf7ce13 	 [2026-04-09 10:54:50] 	 Error 	 ENOENT: no such file or directory, stat '/Users/user/Documents/FHSU_Spring_2026/Backend_Development/Error_Middleware/views/404.html'
+8293bf14-1c8a-43d5-93ff-2dd4d3088d94 	 [2026-04-09 10:58:23] 	 Error 	 Intentional server error for testing
+74ab02d6-df37-4051-a79c-ba8c10a43742 	 [2026-04-13 09:33:22] 	 Error 	 Intentional server error for testing
+965717de-b68a-4b41-a613-9baead3f300e 	 [2026-04-13 12:05:40] 	 Error 	 Intentional server error for testing
